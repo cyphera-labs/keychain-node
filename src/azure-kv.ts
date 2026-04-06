@@ -1,5 +1,5 @@
 import { KeyClient } from "@azure/keyvault-keys";
-import { CryptographyClient, KnownKeyWrapAlgorithms } from "@azure/keyvault-keys";
+import { CryptographyClient, KeyWrapAlgorithm } from "@azure/keyvault-keys";
 import { DefaultAzureCredential, TokenCredential } from "@azure/identity";
 import { randomBytes } from "crypto";
 import { KeyProvider, KeyRecord, Status, KeyNotFoundError } from "./provider";
@@ -27,7 +27,7 @@ export class AzureKvProvider implements KeyProvider {
     const plaintext = randomBytes(32);
     const key = await this.keyClient.getKey(this.keyName);
     const cryptoClient = new CryptographyClient(key, this.credential);
-    await cryptoClient.wrapKey(KnownKeyWrapAlgorithms.RsaOaep, plaintext);
+    await cryptoClient.wrapKey("RSA-OAEP" as KeyWrapAlgorithm, plaintext);
     return plaintext;
   }
 
