@@ -19,3 +19,5 @@ export { AzureKvProvider } from "./azure-kv";
 export type { AzureKvProviderOptions } from "./azure-kv";
 export { VaultProvider } from "./vault";
 export type { VaultProviderOptions } from "./vault";
+
+export { resolve } from "./bridge";
