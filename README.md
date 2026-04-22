@@ -155,4 +155,4 @@ Reads keys from Vault KV v2. The secret at `<mount>/data/<ref>` should contain f
 
 ## License
 
-MIT
+Apache 2.0

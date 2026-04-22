@@ -16,7 +16,7 @@
     "fpe"
   ],
   "author": "Cyphera <sdk@cyphera.dev>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@aws-sdk/client-kms": "^3.1029.0",
     "@azure/identity": "^4.0.0",
