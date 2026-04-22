@@ -1,0 +1,7 @@
+.github/
+.editorconfig
+.gitignore
+docker-compose.yml
+src/
+tsconfig.json
+dist/__tests__/

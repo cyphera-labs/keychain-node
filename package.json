@@ -1,6 +1,6 @@
 {
   "name": "@cyphera/keychain",
-  "version": "0.1.0",
+  "version": "0.0.1-alpha.1",
   "description": "Key provider abstraction for Cyphera encryption SDKs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
