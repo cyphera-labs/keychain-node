@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Run unit tests
-        run: node --experimental-vm-modules node_modules/.bin/jest --testPathPattern='src/__tests__/(?!integration)' --forceExit
+        run: node --experimental-vm-modules node_modules/.bin/jest --testPathPatterns='src/__tests__/(?!integration)' --forceExit
 
   integration:
     name: Integration Tests
@@ -72,7 +72,7 @@ jobs:
         run: npm run build
 
       - name: Run integration tests
-        run: node --experimental-vm-modules node_modules/.bin/jest --testPathPattern='src/__tests__/integration' --forceExit
+        run: node --experimental-vm-modules node_modules/.bin/jest --testPathPatterns='src/__tests__/integration' --forceExit
         env:
           AWS_ACCESS_KEY_ID: test
           AWS_SECRET_ACCESS_KEY: test
